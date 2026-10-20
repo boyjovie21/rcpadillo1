@@ -1,0 +1,2676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rico R. Padillo | Personal Portfolio</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f6f8fb;
+    color: #20252b;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    background: rgba(20, 25, 30, 0.97);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #c9a227;
+    color: white;
+
+    border-radius: 10px;
+
+    margin-right: 8px;
+
+    font-weight: 800;
+}
+
+.nav-link {
+    color: #eeeeee !important;
+    margin-left: 15px;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #e0b52e !important;
+}
+
+
+/* =========================================================
+   HERO / HOME
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 80px;
+
+    color: white;
+
+    background:
+        radial-gradient(circle at 80% 25%, #4d4a42 0%, transparent 30%),
+        linear-gradient(135deg, #17191c, #282b2f 55%, #151719);
+
+    overflow: hidden;
+}
+
+.hero-content {
+    animation: fadeUp 1s ease;
+}
+
+.hello {
+    color: #e0b52e;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 76px);
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #e0b52e;
+}
+
+.hero h3 {
+    font-size: 21px;
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    color: #d2d2d2;
+
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+.btn-gold {
+    background: #c9a227;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.btn-gold:hover {
+    background: #a98719;
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+.btn-outline-gold {
+    border: 1px solid #e0b52e;
+
+    color: #e0b52e;
+
+    padding: 12px 25px;
+
+    border-radius: 8px;
+
+    transition: .3s;
+}
+
+.btn-outline-gold:hover {
+    background: #e0b52e;
+
+    color: #17191c;
+}
+
+.social-icons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #555;
+
+    border-radius: 50%;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.social-icons a:hover {
+    background: #c9a227;
+
+    border-color: #c9a227;
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   PROFILE PHOTO
+========================================================= */
+
+.profile-container {
+    position: relative;
+
+    display: inline-block;
+
+    animation: fadeIn 1.2s ease;
+}
+
+.profile-image {
+    width: 380px;
+    height: 380px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 8px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.45);
+}
+
+.profile-ring {
+    position: absolute;
+
+    inset: -15px;
+
+    border: 2px solid #c9a227;
+
+    border-radius: 50%;
+
+    opacity: .5;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #b08b18;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+
+    font-weight: 800;
+}
+
+.section-title h2 span {
+    color: #c9a227;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-photo {
+    position: relative;
+}
+
+.about-photo img {
+    width: 100%;
+    height: 470px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.12);
+}
+
+.about-photo::after {
+    content: "";
+
+    position: absolute;
+
+    left: 15px;
+    top: 15px;
+
+    width: 100%;
+    height: 100%;
+
+    border: 3px solid #c9a227;
+
+    border-radius: 18px;
+
+    z-index: -1;
+}
+
+.about-text h3 {
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #5f6670;
+
+    line-height: 1.8;
+}
+
+.about-info {
+    margin-top: 25px;
+}
+
+.about-info div {
+    display: flex;
+
+    margin-bottom: 13px;
+}
+
+.about-info strong {
+    width: 145px;
+
+    color: #b08b18;
+}
+
+
+/* =========================================================
+   EDUCATION / GOALS CARDS
+========================================================= */
+
+.info-card {
+    height: 100%;
+
+    display: flex;
+
+    gap: 20px;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.07);
+
+    transition: .3s;
+}
+
+.info-card:hover {
+    transform: translateY(-7px);
+}
+
+.info-icon {
+    min-width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #f7efd1;
+
+    color: #b08b18;
+
+    font-size: 24px;
+}
+
+.info-card h4 {
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+.info-card p {
+    color: #68707a;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills-section {
+    background: #eeeeec;
+}
+
+.skill-card {
+    height: 100%;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    border: 1px solid #e3e3df;
+
+    transition: .3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.1);
+}
+
+.skill-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #f7efd1;
+
+    color: #b08b18;
+
+    font-size: 30px;
+}
+
+.skill-card h4 {
+    margin-top: 20px;
+
+    font-weight: 700;
+}
+
+.skill-card p {
+    color: #68707a;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.progress {
+    height: 8px;
+
+    background: #e8e8e8;
+
+    margin-top: 20px;
+}
+
+.progress-bar {
+    background: #c9a227;
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.project-card {
+    height: 100%;
+
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.08);
+
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.13);
+}
+
+.project-image {
+    height: 230px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+.project-card:hover img {
+    transform: scale(1.08);
+}
+
+.project-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(140,110,20,.82);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+    transition: .3s;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay i {
+    font-size: 35px;
+
+    color: white;
+}
+
+.project-content {
+    padding: 28px;
+}
+
+.project-category {
+    color: #b08b18;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.project-content h3 {
+    font-size: 21px;
+
+    font-weight: 700;
+
+    margin: 10px 0;
+}
+
+.project-content p {
+    color: #68707a;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.achievements-section {
+    background: #181a1d;
+
+    color: white;
+}
+
+.achievements-section .section-title h2 {
+    color: white;
+}
+
+.achievement-card {
+    height: 100%;
+
+    text-align: center;
+
+    padding: 40px 30px;
+
+    background: #25282c;
+
+    border: 1px solid #35383d;
+
+    border-radius: 18px;
+
+    transition: .3s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #c9a227;
+}
+
+.achievement-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #393521;
+
+    color: #e0b52e;
+
+    font-size: 32px;
+}
+
+.achievement-card h3 {
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+.achievement-card p {
+    color: #bfc1c5;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.achievement-card span {
+    color: #e0b52e;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   RESUME
+========================================================= */
+
+.resume-box {
+    background: white;
+
+    padding: 50px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,.08);
+}
+
+.resume-box h3 {
+    font-size: 21px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+.resume-box h3 i {
+    color: #c9a227;
+
+    margin-right: 10px;
+}
+
+.timeline {
+    border-left: 2px solid #dedede;
+
+    padding-left: 25px;
+}
+
+.timeline-item {
+    position: relative;
+
+    margin-bottom: 30px;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: -32px;
+
+    top: 5px;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #c9a227;
+}
+
+.timeline-item span {
+    color: #b08b18;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.timeline-item h4 {
+    font-size: 18px;
+
+    margin: 8px 0;
+}
+
+.timeline-item p {
+    color: #68707a;
+}
+
+.resume-list {
+    list-style: none;
+
+    padding: 0;
+}
+
+.resume-list li {
+    margin-bottom: 15px;
+
+    color: #59616b;
+}
+
+.resume-list i {
+    color: #c9a227;
+
+    margin-right: 10px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+    background: #eeeeec;
+}
+
+.contact-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f7efd1;
+
+    color: #b08b18;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+.contact-item h5 {
+    margin: 0;
+
+    font-weight: 700;
+}
+
+.contact-item p {
+    margin: 4px 0 0;
+
+    color: #68707a;
+}
+
+.contact-form {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.08);
+}
+
+.contact-form label {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.form-control {
+    padding: 13px 15px;
+
+    border-radius: 8px;
+
+    border: 1px solid #d8d8d8;
+}
+
+.form-control:focus {
+    border-color: #c9a227;
+
+    box-shadow:
+        0 0 0 3px rgba(201,162,39,.12);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #111315;
+
+    color: white;
+
+    padding: 50px 0 25px;
+}
+
+footer p {
+    color: #aeb2b7;
+}
+
+.footer-social {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 25px 0;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #45484c;
+
+    border-radius: 50%;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.footer-social a:hover {
+    background: #c9a227;
+
+    border-color: #c9a227;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .hero {
+        text-align: center;
+
+        padding-bottom: 80px;
+    }
+
+    .hero-description {
+        margin: auto;
+    }
+
+    .hero-buttons,
+    .social-icons {
+        justify-content: center;
+    }
+
+    .profile-container {
+        margin-top: 70px;
+    }
+
+    .profile-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+
+        padding: 10px 0;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-info div {
+        display: block;
+    }
+
+    .about-info strong {
+        display: block;
+    }
+
+    .resume-box {
+        padding: 25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#home">
+
+            <span class="logo">
+                RP
+            </span>
+
+            Rico Padillo
+
+        </a>
+
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active"
+                       href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#skills">
+                        Skills
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#projects">
+                        Projects
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#achievements">
+                        Achievements
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#resume">
+                        Resume
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     HOME
+========================================================= -->
+
+<section id="home"
+         class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7 hero-content">
+
+                <p class="hello">
+                    WELCOME TO MY PORTFOLIO
+                </p>
+
+                <h1>
+                    Rico R. <span>Padillo</span>
+                </h1>
+
+                <h3>
+                    BS Criminology Student
+                </h3>
+
+                <p class="hero-description">
+
+                    I am an introverted optimist who thrives on
+                    curiosity and lifelong learning. I believe that
+                    small daily habits lead to meaningful change.
+                    I enjoy online games, books, experimenting with
+                    new recipes, and exploring local hiking trails.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#about"
+                       class="btn btn-gold">
+
+                        <i class="bi bi-person-fill"></i>
+
+                        About Me
+
+                    </a>
+
+
+                    <a href="#contact"
+                       class="btn btn-outline-gold">
+
+                        Contact Me
+
+                    </a>
+
+                </div>
+
+
+                <div class="social-icons">
+
+                    <a href="https://www.facebook.com/profile.php?id=61573330298953">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-envelope-fill"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-5 text-center">
+
+                <div class="profile-container">
+
+                    <div class="profile-ring"></div>
+
+                    <!-- CHANGE THIS TO YOUR PHOTO -->
+
+                    <img src="./f0b3fadc-025a-468a-9d89-10fb2af2d01c.jpg"
+                         class="profile-image"
+                         alt="Rico R. Padillo">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT ME
+========================================================= -->
+
+<section id="about"
+         class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>
+                GET TO KNOW ME
+            </p>
+
+            <h2>
+                About <span>Me</span>
+            </h2>
+
+        </div>
+
+
+        <div class="row align-items-center">
+
+
+            <div class="col-lg-5 mb-4">
+
+                <div class="about-photo">
+
+                    <!-- CHANGE THIS TO YOUR PHOTO -->
+
+                    <img src="./f0b3fadc-025a-468a-9d89-10fb2af2d01c.jpg"
+                         alt="Rico Padillo">
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-7 about-text">
+
+                <h3>
+                    Hello, I'm Rico R. Padillo
+                </h3>
+
+
+                <p>
+
+                    I am an introverted optimist who thrives on
+                    curiosity and lifelong learning. I believe that
+                    small daily habits lead to meaningful change,
+                    so I spend my free time diving into books,
+                    playing online games, experimenting with new
+                    recipes, and exploring local hiking trails.
+
+                </p>
+
+
+                <p>
+
+                    I am constantly seeking new perspectives and
+                    trying to leave things a little better than
+                    I found them. I enjoy learning new things and
+                    developing myself both academically and personally.
+
+                </p>
+
+
+                <div class="about-info">
+
+                    <div>
+
+                        <strong>
+                            Full Name:
+                        </strong>
+
+                        <span>
+                            Rico R. Padillo
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Course:
+                        </strong>
+
+                        <span>
+                            Bachelor of Science in Criminology
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            School:
+                        </strong>
+
+                        <span>
+                            Dr. Aurelio Mendoza Memorial Colleges
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            School Years:
+                        </strong>
+
+                        <span>
+                            2026–2030
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="row g-4 mt-5">
+
+
+            <!-- EDUCATION -->
+
+            <div class="col-md-6">
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+
+                        <i class="bi bi-mortarboard-fill"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Educational Background
+                        </h4>
+
+                        <p>
+
+                            Bachelor of Science in Criminology
+                            at Dr. Aurelio Mendoza Memorial Colleges,
+                            2026–2030.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAREER GOAL -->
+
+            <div class="col-md-6">
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+
+                        <i class="bi bi-bullseye"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Career Goals
+                        </h4>
+
+                        <p>
+
+                            I am a motivated student focused on building
+                            a successful future career. My immediate
+                            goal is to gain practical experience through
+                            internships and hands-on projects. Ultimately,
+                            I aim to turn my passions into a meaningful
+                            profession where I can make a positive impact.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+
+            <!-- INTERESTS -->
+
+            <div class="col-md-6">
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+
+                        <i class="bi bi-heart-fill"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            Personal Interests
+                        </h4>
+
+                        <p>
+
+                            I enjoy online games, reading books,
+                            cooking and experimenting with recipes,
+                            and exploring local hiking trails.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PERSONALITY -->
+
+            <div class="col-md-6">
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+
+                        <i class="bi bi-person-fill"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            About My Personality
+                        </h4>
+
+                        <p>
+
+                            I am a student who works hard in school
+                            and enjoys learning new things. My goal is
+                            to use my education to build a successful
+                            and happy future career.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section id="skills"
+         class="section skills-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>
+                WHAT I CAN DO
+            </p>
+
+            <h2>
+                My <span>Skills</span>
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- COOKING -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-egg-fried"></i>
+
+                    </div>
+
+                    <h4>
+                        Cooking
+                    </h4>
+
+                    <p>
+
+                        I enjoy preparing food and experimenting
+                        with different recipes and cooking techniques.
+
+                    </p>
+
+                    <div class="progress">
+
+                        <div class="progress-bar"
+                             style="width:85%">
+
+                            85%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMMUNICATION -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-chat-dots-fill"></i>
+
+                    </div>
+
+                    <h4>
+                        Communication
+                    </h4>
+
+                    <p>
+
+                        I can communicate ideas clearly and work
+                        effectively with other people.
+
+                    </p>
+
+                    <div class="progress">
+
+                        <div class="progress-bar"
+                             style="width:85%">
+
+                            85%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LEADERSHIP -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-people-fill"></i>
+
+                    </div>
+
+                    <h4>
+                        Leadership
+                    </h4>
+
+                    <p>
+
+                        I can take responsibility, cooperate with
+                        others, and help guide a team toward a goal.
+
+                    </p>
+
+                    <div class="progress">
+
+                        <div class="progress-bar"
+                             style="width:80%">
+
+                            80%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROBLEM SOLVING -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-lightbulb-fill"></i>
+
+                    </div>
+
+                    <h4>
+                        Problem Solving
+                    </h4>
+
+                    <p>
+
+                        I approach challenges logically and try
+                        to find practical solutions to problems.
+
+                    </p>
+
+                    <div class="progress">
+
+                        <div class="progress-bar"
+                             style="width:85%">
+
+                            85%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- COMPUTER -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+
+                        <i class="bi bi-pc-display"></i>
+
+                    </div>
+
+                    <h4>
+                        Computer Skills
+                    </h4>
+
+                    <p>
+
+                        I am comfortable using computers and
+                        learning different digital tools and technologies.
+
+                    </p>
+
+                    <div class="progress">
+
+                        <div class="progress-bar"
+                             style="width:80%">
+
+                            80%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROJECTS / WORKS
+========================================================= -->
+
+<section id="projects"
+         class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>
+                MY WORK
+            </p>
+
+            <h2>
+                Projects & <span>Activities</span>
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="project-card">
+
+                    <div class="project-image">
+
+                        <img src="./ec678d1b-165a-4b2b-9496-92d0c77afbc2.jpg"
+                             alt="Academic Project">
+
+                        <div class="project-overlay">
+
+                            <i class="bi bi-search"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-category">
+                            Academic Project
+                        </span>
+
+                        <h3>
+                            School Research Activity
+                        </h3>
+
+                        <p>
+
+                            A school-based research activity focused
+                            on gathering information, analyzing
+                            resources, and presenting findings.
+
+                        </p>
+
+                        <p>
+
+                            <strong>
+                                My Role:
+                            </strong>
+
+                            Researcher and presenter.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="project-card">
+
+                    <div class="project-image">
+
+                        <img src="./63ac5c7c-51bf-44df-900a-b84818fa255a.jpg"
+                             alt="Group Activity">
+
+                        <div class="project-overlay">
+
+                            <i class="bi bi-search"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-category">
+                            Group Activity
+                        </span>
+
+                        <h3>
+                            Team Collaboration Activity
+                        </h3>
+
+                        <p>
+
+                            A collaborative school activity that
+                            required teamwork, communication,
+                            planning, and responsibility.
+
+                        </p>
+
+                        <p>
+
+                            <strong>
+                                My Role:
+                            </strong>
+
+                            Team member and contributor.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="project-card">
+
+                    <div class="project-image">
+
+                        <img src="./8dcf98a7-7b9e-4e12-a5d3-40c3921abfcd.jpg"
+                             alt="Personal Development">
+
+                        <div class="project-overlay">
+
+                            <i class="bi bi-search"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-category">
+                            Personal Activity
+                        </span>
+
+                        <h3>
+                            Personal Development
+                        </h3>
+
+                        <p>
+
+                            A personal development activity focused
+                            on building better habits, learning new
+                            skills, and improving daily productivity.
+
+                        </p>
+
+                        <p>
+
+                            <strong>
+                                My Role:
+                            </strong>
+
+                            Planner and participant.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="text-center mt-4">
+
+            <p class="text-muted">
+
+                *Replace these sample projects with your actual
+                completed projects or school activities.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ACHIEVEMENTS
+========================================================= -->
+
+<section id="achievements"
+         class="section achievements-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>
+                MY ACCOMPLISHMENTS
+            </p>
+
+            <h2>
+                Achievements & <span>Certificates</span>
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="achievement-card">
+
+                    <div class="achievement-icon">
+
+                        <i class="bi bi-award-fill"></i>
+
+                    </div>
+
+                    <h3>
+                        School Achievement
+                    </h3>
+
+                    <p>
+
+                        Recognition or accomplishment received
+                        through school activities and academic work.
+
+                    </p>
+
+                    <span>
+                        School Achievement
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="achievement-card">
+
+                    <div class="achievement-icon">
+
+                        <i class="bi bi-bookmark-star-fill"></i>
+
+                    </div>
+
+                    <h3>
+                        Academic Activities
+                    </h3>
+
+                    <p>
+
+                        Participated in school activities that helped
+                        develop communication, teamwork, and leadership.
+
+                    </p>
+
+                    <span>
+                        Academic Activity
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="achievement-card">
+
+                    <div class="achievement-icon">
+
+                        <i class="bi bi-mortarboard-fill"></i>
+
+                    </div>
+
+                    <h3>
+                        Continuing Education
+                    </h3>
+
+                    <p>
+
+                        Currently pursuing a Bachelor of Science
+                        in Criminology and continuously developing
+                        academic and personal skills.
+
+                    </p>
+
+                    <span>
+                        2026–2030
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RESUME
+========================================================= -->
+
+<section id="resume"
+         class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>
+                MY BACKGROUND
+            </p>
+
+            <h2>
+                My <span>Resume</span>
+            </h2>
+
+        </div>
+
+
+        <div class="resume-box">
+
+            <div class="row">
+
+
+                <!-- LEFT -->
+
+                <div class="col-lg-6">
+
+
+                    <h3>
+
+                        <i class="bi bi-mortarboard-fill"></i>
+
+                        Education
+
+                    </h3>
+
+
+                    <div class="timeline">
+
+                        <div class="timeline-item">
+
+                            <span>
+                                2026–2030
+                            </span>
+
+                            <h4>
+                                Bachelor of Science in Criminology
+                            </h4>
+
+                            <p>
+                                Dr. Aurelio Mendoza Memorial Colleges
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <h3 class="mt-5">
+
+                        <i class="bi bi-person-workspace"></i>
+
+                        Experience
+
+                    </h3>
+
+
+                    <div class="timeline">
+
+                        <div class="timeline-item">
+
+                            <span>
+                                Student Experience
+                            </span>
+
+                            <h4>
+                                Student / School Activities
+                            </h4>
+
+                            <p>
+
+                                Participated in academic activities,
+                                group projects, presentations, and
+                                personal development activities.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RIGHT -->
+
+                <div class="col-lg-6">
+
+
+                    <h3>
+
+                        <i class="bi bi-tools"></i>
+
+                        Skills
+
+                    </h3>
+
+
+                    <ul class="resume-list">
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Cooking
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Communication
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Leadership
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Problem Solving
+                        </li>
+
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Computer Skills
+                        </li>
+
+                    </ul>
+
+
+
+
+                    
+
+
+
+                    <h3 class="mt-4">
+
+                        <i class="bi bi-person-lines-fill"></i>
+
+                        Contact
+
+                    </h3>
+
+
+                    <p>
+                        <i class="bi bi-envelope-fill text-warning"></i>
+
+                        rcpadillo50@gmail.com
+                    </p>
+
+
+                    <p>
+                        <i class="bi bi-geo-alt-fill text-warning"></i>
+
+                        Philippines
+                    </p>
+
+
+                    <a href="./Ipil, shepherd Montessori center purok new Jerusalem, don andres, Ipil Zamb_20261020_211928_0000.pdf"
+                       target="_blank"
+                       class="btn btn-gold">
+
+                        <i class="bi bi-file-earmark-pdf-fill"></i>
+
+                        View Resume
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact"
+         class="section contact-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <p>
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Contact <span>Me</span>
+            </h2>
+
+        </div>
+
+
+        <div class="row g-5">
+
+
+            <!-- CONTACT INFO -->
+
+            <div class="col-lg-5">
+
+                <h3>
+                    Let's Connect
+                </h3>
+
+                <p class="text-muted">
+
+                    If you would like to contact me, feel free
+                    to send a message using the contact form
+                    or through my contact information.
+
+                </p>
+
+
+                <div class="mt-4">
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+
+                            <i class="bi bi-envelope-fill"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5>
+                                Email
+                            </h5>
+
+                            <p>
+                                rcpadillo50@gmail.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5>
+                                Location
+                            </h5>
+
+                            <p>
+                                Philippines
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+
+                            <i class="bi bi-facebook"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5>
+                                Facebook
+                            </h5>
+
+                            <p>
+                                Rc Padillo
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="col-lg-7">
+
+                <form id="contactForm"
+                      class="contact-form">
+
+
+                    <div class="row">
+
+
+                        <div class="col-md-6 mb-3">
+
+                            <label>
+                                Name
+                            </label>
+
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Your Name"
+                                   required>
+
+                        </div>
+
+
+                        <div class="col-md-6 mb-3">
+
+                            <label>
+                                Email
+                            </label>
+
+                            <input type="email"
+                                   class="form-control"
+                                   placeholder="Your Email"
+                                   required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label>
+                            Subject
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Subject"
+                               required>
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label>
+                            Message
+                        </label>
+
+                        <textarea class="form-control"
+                                  rows="6"
+                                  placeholder="Write your message..."
+                                  required></textarea>
+
+                    </div>
+
+
+                    <button type="submit"
+                            class="btn btn-gold">
+
+                        <i class="bi bi-send-fill"></i>
+
+                        Send Message
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container text-center">
+
+        <h3>
+            Rico R. Padillo
+        </h3>
+
+        <p>
+            BS Criminology Student | Future Professional
+        </p>
+
+
+        <div class="footer-social">
+
+            <a href="#">
+                <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="bi bi-envelope-fill"></i>
+            </a>
+
+        </div>
+
+
+        <hr>
+
+
+        <p class="mb-0">
+
+            © 2026 Rico R. Padillo.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     BOOTSTRAP JAVASCRIPT
+========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<script>
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+const sections =
+    document.querySelectorAll("section");
+
+const navLinks =
+    document.querySelectorAll(".nav-link");
+
+
+window.addEventListener("scroll", function () {
+
+    let current = "";
+
+    sections.forEach(function (section) {
+
+        const sectionTop =
+            section.offsetTop - 150;
+
+        const sectionHeight =
+            section.clientHeight;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+
+            current =
+                section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navLinks.forEach(function (link) {
+
+        link.classList.remove("active");
+
+        if (
+            link.getAttribute("href")
+            === "#" + current
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+const contactForm =
+    document.getElementById("contactForm");
+
+
+contactForm.addEventListener(
+    "submit",
+    function (event) {
+
+        event.preventDefault();
+
+        alert(
+            "Thank you for contacting Rico R. Padillo!"
+        );
+
+        contactForm.reset();
+
+    }
+);
+
+
+/* =========================================================
+   MOBILE NAVBAR
+========================================================= */
+
+const mobileLinks =
+    document.querySelectorAll(
+        ".navbar-nav .nav-link"
+    );
+
+
+mobileLinks.forEach(function (link) {
+
+    link.addEventListener(
+        "click",
+        function () {
+
+            const navbar =
+                document.querySelector(
+                    ".navbar-collapse"
+                );
+
+            if (
+                navbar.classList.contains("show")
+            ) {
+
+                const collapse =
+                    new bootstrap.Collapse(
+                        navbar
+                    );
+
+                collapse.hide();
+
+            }
+
+        }
+    );
+
+});
+
+</script>
+
+
+</body>
+
+</html>
